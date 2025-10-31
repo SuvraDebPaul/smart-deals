@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes:
+    light --default,
+    dark --prefersdark;
+}
+
+@plugin "daisyui/theme" {
+  name: "light";
+  default: true;
+}
+
+.text-gradient {
+  @apply bg-linear-to-br from-[#632EE3] to-[#9F62F2] bg-clip-text text-transparent;
+}
+
+.btn-gradient {
+  @apply border-none bg-linear-to-br from-[#632EE3] to-[#9F62F2] text-white hover:opacity-90;
+}
+
+* {
+  font-family: "Inter", sans-serif;
+}
