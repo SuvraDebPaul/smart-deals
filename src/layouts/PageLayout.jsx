@@ -1,9 +1,10 @@
-import { Outlet } from "react-router";
+import { Outlet, useLoaderData } from "react-router";
 import Navbar from "../features/header/Navbar";
 import Footer from "../features/footer/Footer";
 import Container from "../utilities/Container";
 
 const PageLayout = () => {
+  const allProducts = useLoaderData();
   return (
     <>
       <header>
@@ -12,14 +13,10 @@ const PageLayout = () => {
         </Container>
       </header>
       <main>
-        <Container>
-          <Outlet></Outlet>
-        </Container>
+        <Outlet></Outlet>
       </main>
-      <footer>
-        <Container>
-          <Footer></Footer>
-        </Container>
+      <footer className="bg-[#001931]">
+        <Footer allProducts={allProducts}></Footer>
       </footer>
     </>
   );

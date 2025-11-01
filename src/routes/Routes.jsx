@@ -14,6 +14,8 @@ export const router = createBrowserRouter([
   {
     path: "/",
     element: <PageLayout />,
+    loader: () =>
+      fetch("http://localhost:3000/products").then((res) => res.json()),
     children: [
       {
         index: true,

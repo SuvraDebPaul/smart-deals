@@ -86,6 +86,30 @@ const AuthProvider = ({ children }) => {
       unsubscribe();
     };
   });
+  //NavLinks
+
+  const headerNavLinks = [
+    {
+      name: "Home",
+      path: "/",
+    },
+    {
+      name: "All Products",
+      path: "/allproducts",
+    },
+    {
+      name: "My Products",
+      path: "/myproducts",
+    },
+    {
+      name: "My Bids",
+      path: "/mybids",
+    },
+    {
+      name: "Create Product",
+      path: "/createproduct",
+    },
+  ];
 
   const AuthInfo = {
     createUser,
@@ -97,6 +121,7 @@ const AuthProvider = ({ children }) => {
     loading,
     setLoading,
     signOutUser,
+    headerNavLinks,
   };
 
   return <AuthContext value={AuthInfo}>{children}</AuthContext>;
