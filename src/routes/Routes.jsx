@@ -9,6 +9,7 @@ import MyProducts from "../features/products/MyProducts";
 import MyBids from "../features/bids/MyBids";
 import PrivateRoutes from "./PrivateRoutes";
 import CreateProduct from "../features/products/CreateProduct";
+import ProductDetails from "../features/products/ProductDetails";
 
 export const router = createBrowserRouter([
   {
@@ -24,6 +25,10 @@ export const router = createBrowserRouter([
       {
         path: "allproducts",
         element: <AllProducts />,
+      },
+      {
+        path: "product/:id",
+        element: <ProductDetails></ProductDetails>,
       },
       {
         path: "myproducts",

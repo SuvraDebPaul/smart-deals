@@ -52,10 +52,18 @@ const Home = () => {
             </fieldset>
           </form>
           <div>
-            <Link type="button" className="btn btn-gradient mr-2">
+            <Link
+              to="allproducts"
+              type="button"
+              className="btn btn-gradient mr-2"
+            >
               Watch All Products
             </Link>
-            <Link type="button" className="btn btn-outline btn-primary">
+            <Link
+              to="createproduct"
+              type="button"
+              className="btn btn-outline btn-primary"
+            >
               Post an Product
             </Link>
           </div>

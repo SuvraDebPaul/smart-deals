@@ -11,7 +11,7 @@ const Footer = ({ allProducts }) => {
   const productCategories = allProducts.map((p) => p.category);
   const uniqueCategories = [...new Set(productCategories)];
   return (
-    <Container className="mt-20">
+    <Container className="pt-5">
       <section className="footer sm:footer-horizontal p-10 text-stone-200">
         <aside>
           <h2 className="text-2xl font-bold">
